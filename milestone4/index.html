@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <section id="form-section">
+            <h2>Resume Builder Form</h2>
+            <form id="resume-form">
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" required>
+                </div>
+
+                <!-- Education -->
+                <div class="form-group">
+                    <label for="education">Education:</label>
+                    <textarea id="education" required></textarea>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="form-group">
+                    <label for="work-experience">Work Experience:</label>
+                    <textarea id="work-experience"></textarea>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-group">
+                    <label for="skills">Skills (comma separated):</label>
+                    <input type="text" id="skills" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Generate Resume</button>
+            </form>
+        </section>
+
+        <!-- Resume Display Section -->
+        <section id="resume-section" class="resume hidden">
+            <h2>Generated Resume</h2>
+            <div class="profile">
+                <h3 id="display-name" contenteditable="true"></h3>
+                <p>Email: <span id="display-email" contenteditable="true"></span></p>
+                <p>Phone: <span id="display-phone" contenteditable="true"></span></p>
+            </div>
+
+            <div class="education">
+                <h4>Education</h4>
+                <p id="display-education" contenteditable="true"></p>
+            </div>
+
+            <div class="work-experience">
+                <h4>Work Experience</h4>
+                <p id="display-work-experience" contenteditable="true"></p>
+            </div>
+
+            <div class="skills">
+                <h4>Skills</h4>
+                <ul id="display-skills"></ul>
+            </div>
+            <button class="save-btn" id="save-btn">Save Changes</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
